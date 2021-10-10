@@ -1,0 +1,31 @@
+{
+    "name": "Blip",
+    "description": "Clipboard in the cloud.",
+    "version": "2.0.0",
+    "minimum_chrome_version": "80",
+    "manifest_version": 2,
+    "icons": {
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "identity",
+        "identity.email",
+        "storage",
+        "notifications",
+        "background",
+        "contextMenus",
+        "clipboardRead",
+        "clipboardWrite",
+        "downloads"
+    ],
+    "browser_action": {
+        "default_icon": "icon128.png",
+        "default_title": "Blip",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com/ https://www.gstatic.com/ https://*.firebaseio.com https://www.google-analytics.com https://www.googletagmanager.com https://cdn.jsdelivr.net/npm/ https://fonts.googleapis.com/; object-src 'self'"
+}
